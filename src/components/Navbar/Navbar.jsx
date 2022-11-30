@@ -73,7 +73,7 @@ export default function Navbar() {
     };
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar sx={{ backgroundColor: "#2a2a2a",width:'100%' }}>
+            <AppBar sx={{ backgroundColor: "#2a2a2a", width: "100%" }}>
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -85,30 +85,41 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
 
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "none", sm: "block" },
-                            width: "20%",
-                        }}
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="open drawer"
+                        sx={{ mr: 2 }}
                     >
-                        Ka Ni
-                    </Typography>
-                    {pages.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                            <Typography textAlign="center">{page}</Typography>
-                        </MenuItem>
-                    ))}
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ "aria-label": "search" }}
+                        <img
+                            style={{ width: "40px", height: "40px" }}
+                            src="https://seeklogo.com/images/E/epic-games-logo-A9D86272DC-seeklogo.com.png"
+                            alt=""
                         />
-                    </Search>
+                    </IconButton>
+                    <Box
+                        sx={{ display: "flex", justifyContent: "space-evenly" }}
+                    >
+                        
+                        {pages.map((page) => (
+                            <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center">
+                                    {page}
+                                </Typography>
+                            </MenuItem>
+                        ))}
+
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{ "aria-label": "search" }}
+                            />
+                        </Search>
+                    </Box>
                     <IconButton
                         size="large"
                         aria-label="account of current user"

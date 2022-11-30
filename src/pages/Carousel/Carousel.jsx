@@ -34,6 +34,11 @@ const images = [
         imgPath:
             "https://media.contentapi.ea.com/content/dam/apex-legends/common/apex-hunted-primary-thumbnail.jpg.adapt.crop191x100.628p.jpg",
     },
+    {
+        label: "Goč, Serbia",
+        imgPath:
+            "https://media.contentapi.ea.com/content/dam/apex-legends/common/apex-hunted-primary-thumbnail.jpg.adapt.crop191x100.628p.jpg",
+    },
 ];
 
 function Carousel() {
@@ -56,14 +61,14 @@ function Carousel() {
     return (
         <Box
             sx={{
-                display: "flex",
-                justifyContent: "space-evenly",
+                // display: "flex",
+                // justifyContent: "space-evenly",
                 pt: "100px",
             }}
         >
             <Box
                 sx={{
-                    maxWidth: 800,
+                    maxWidth: 1000,
                     flexGrow: 1,
                     boxShadow: "-1px -1px 51px 11px rgba(255,255,255,0.75)",
                 }}
@@ -82,7 +87,7 @@ function Carousel() {
                                     sx={{
                                         height: 255,
                                         display: "block",
-                                        maxWidth: 800,
+                                        maxWidth: 1000,
                                         overflow: "hidden",
                                         width: "100%",
                                         height: "500px",
@@ -143,16 +148,6 @@ function Carousel() {
                         </Button>
                     }
                 />
-                
-            </Box>
-            <Box sx={{ width: "40%", color: "white" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                ipsa explicabo aspernatur porro laborum ut quam aliquid
-                recusandae tempore. Similique molestiae nesciunt perspiciatis
-                consequuntur ad magnam doloremque ipsam! Ut iste perferendis
-                inventore. Cumque sit eos vitae at neque debitis, recusandae
-                consectetur. Provident, voluptas impedit repellendus eveniet
-                odit rem harum maxime!
             </Box>
         </Box>
     );
