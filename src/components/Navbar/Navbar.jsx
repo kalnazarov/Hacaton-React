@@ -10,8 +10,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Menu, MenuItem } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { useAuth } from "../context/AuthContextProvaider";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Главная", "Все игры", "Новости"];
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -56,6 +59,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+    const {
+        user: { email },
+        handleLogout,
+    } = useAuth();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -71,6 +78,8 @@ export default function Navbar() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+    const navigate = useNavigate();
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar sx={{ backgroundColor: "#2a2a2a", width: "100%" }}>
@@ -91,6 +100,7 @@ export default function Navbar() {
                         color="inherit"
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
+                        onClick={() => navigate("/")}
                     >
                         <img
                             style={{ width: "40px", height: "40px" }}
@@ -99,55 +109,86 @@ export default function Navbar() {
                         />
                     </IconButton>
                     <Box
-                        sx={{ display: "flex", justifyContent: "space-evenly" }}
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                        }}
                     >
-                        
-                        {pages.map((page) => (
-                            <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">
-                                    {page}
+                        <Box display={"flex"}>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center" onClick={() => navigate("/")}> 
+                                    Главная
                                 </Typography>
                             </MenuItem>
-                        ))}
-
-                        <Search>
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ "aria-label": "search" }}
-                            />
-                        </Search>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center" onClick={() => navigate("/products")}> 
+                                    Все игры
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center">
+                                    О нас
+                                </Typography>
+                            </MenuItem>
+                        </Box>
+                        <Box display={"flex"} alignItems={"center"}>
+                            <Search>
+                                <SearchIconWrapper>
+                                    <SearchIcon />
+                                </SearchIconWrapper>
+                                <StyledInputBase
+                                    placeholder="Search…"
+                                    inputProps={{ "aria-label": "search" }}
+                                />
+                            </Search>
+                            <IconButton>
+                                <ShoppingCartCheckoutIcon
+                                    sx={{ color: "white" }}
+                                />
+                            </IconButton>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleMenu}
+                                color="inherit"
+                            ></IconButton>
+                        </Box>
                     </Box>
-                    <IconButton
-                        size="large"
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                    >
-                        <AccountCircle />
-                    </IconButton>
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorEl}
-                        anchorOrigin={{
-                            vertical: "top",
-                            horizontal: "right",
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: "top",
-                            horizontal: "right",
-                        }}
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                    </Menu>
+                    <Box sx={{ flexGrow: 0 }}>
+                        {email ? (
+                            <MenuItem onClick={handleLogout}>
+                                <Typography
+                                    sx={{ textAlign: "center", color: "white" }}
+                                >
+                                    Logout
+                                </Typography>
+                                <AccountCircle sx={{ color: "white" }} />
+                            </MenuItem>
+                        ) : (
+                            <Link
+                                to="/auth"
+                                style={{
+                                    textDecoration: "none ",
+                                    color: "black",
+                                }}
+                            >
+                                <MenuItem onClick={handleLogout}>
+                                    <Typography
+                                        sx={{
+                                            textAlign: "center",
+                                            color: "white",
+                                        }}
+                                    >
+                                        Login
+                                    </Typography>
+                                    <AccountCircle sx={{ color: "white" }} />
+                                </MenuItem>
+                            </Link>
+                        )}
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>

@@ -69,6 +69,7 @@ const Footer = () => {
             sx={{
                 backgroundColor: "#2a2a2a",
                 color: "whitesmoke",
+                
             }}
         >
             <Box
@@ -105,9 +106,14 @@ const Footer = () => {
                                 className="icon-instagram"
                                 href="https://t.me/epicgamesru"
                             >
-                                <TelegramIcon sx={{color:'gray',"&:hover": {
-                                                        color: "#0099ff",
-                                                    },}} />
+                                <TelegramIcon
+                                    sx={{
+                                        color: "gray",
+                                        "&:hover": {
+                                            color: "#0099ff",
+                                        },
+                                    }}
+                                />
                             </Link>
                         </ListItem>
                         <ListItem>
@@ -115,9 +121,14 @@ const Footer = () => {
                                 className="icon-twitter"
                                 href="https://twitter.com/EpicGamesRU"
                             >
-                                <TwitterIcon sx={{color:'gray',"&:hover": {
-                                                        color: "#0099ff",
-                                                    },}}/>
+                                <TwitterIcon
+                                    sx={{
+                                        color: "gray",
+                                        "&:hover": {
+                                            color: "#0099ff",
+                                        },
+                                    }}
+                                />
                             </Link>
                         </ListItem>
 
@@ -126,9 +137,14 @@ const Footer = () => {
                                 className="icon-facebook"
                                 href="https://www.facebook.com/epicgames/"
                             >
-                                <FacebookIcon sx={{color:'gray',"&:hover": {
-                                                        color: "#0099ff",
-                                                    },}} />
+                                <FacebookIcon
+                                    sx={{
+                                        color: "gray",
+                                        "&:hover": {
+                                            color: "#0099ff",
+                                        },
+                                    }}
+                                />
                             </Link>
                         </ListItem>
                     </List>
