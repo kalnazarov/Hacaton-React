@@ -14,7 +14,7 @@ const ProductsPage = () => {
     }, []);
 
     const [page, setPage] = useState(1);
-    const itemsPerPage = 39;
+    const itemsPerPage = 30;
     const count = Math.ceil(products.length / itemsPerPage);
 
     function currentData() {
@@ -29,7 +29,7 @@ const ProductsPage = () => {
     }, [searchParams]);
 
     return (
-        <div style={{ backgroundColor: "black",display:'flex',justifyContent:'center' }}>
+        <div style={{ backgroundColor:'rgb(18, 18, 18)',display:'flex',justifyContent:'center' }}>
             <Box sx={{ width: "80%" ,}}>
                 <ProductList currentData={currentData} />
             </Box>

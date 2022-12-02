@@ -10,6 +10,7 @@ const HomePage = () => {
             sx={{
                 width: "100%",
                 height: "100%",
+                // backgroundColor:'rgb(18, 18, 18)'
                 backgroundImage: `url(${"https://mobimg.b-cdn.net/v3/fetch/ec/ecc8608ebb9732b0a74cc79493f1a31f.jpeg"})`,
             }}
         >

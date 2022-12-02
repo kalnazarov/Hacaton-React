@@ -53,7 +53,7 @@ export default function Auth() {
                                 mt: 8,
                                 justifyContent: "center",
                                 width: { xs: "90%", sm: "70%", md: "45%" },
-                               
+                                // backgroundColor: "#2a2a2a",
                             }}
                         >
                             <Typography

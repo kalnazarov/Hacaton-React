@@ -1,271 +1,244 @@
 {
-    "products": [
-        {
-            "name": "BLACKTAIL",
-            "description": "Создайте свою легенду о Бабе-Яге, девочке, которую обвинили в колдовстве и выгнали из дома. Освойте стрельбу из лука, научитесь творить магию и раскройте мрачные тайны пышущего жизнью сказочного мира, навеянного славянской мифологией.",
-            "price": "18.39",
-            "picture": "https://cdn1.epicgames.com/offer/a17cc66c3a3c4d75875febf281c73fd2/EGS_BLACKTAIL_THEPARASIGHT_S2_1200x1600-a87fc356f4792b9b0de74b2d1a10cd26?h=854&resize=1&w=640",
-            "type": "Shuter",
-            "id": 1
-        },
-        {
-            "name": "Tom Clancy's Rainbow",
-            "description": "Tom Clancy's Rainbow Six® Осада — это элитный тактический командный шутер, где побеждает сторона, которая лучше продумает и исполнит свой план.",
-            "price": 4.39,
-            "picture": "https://cdn1.epicgames.com/offer/carnation/Carousel_BoxArt_1200x1600_1200x1600-6888b9d57181d8fcfb3472a7f70ecc49?h=854&resize=1&w=640",
-            "type": "Shuter",
-            "id": 2
-        },
-        {
-            "name": "Timewell: Trail Of Celestes",
-            "description": "Timewell: Trail of Celestes is an old-school story-driven 4 DOF 3D space shooter RPG. As A.I. SAT-V, explore exotic planets and fight with Constructs in an ever-deepening plot. Change her skills and adaptations on the fly. May you guide SAT-V to her destiny?",
-            "price": 12.99,
-            "picture": "https://cdn1.epicgames.com/spt-assets/6e0edb69052f4f8a853fb8a60bde8eb8/timewell_trail_of_celestes-1gg9e.jpg?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        {
-            "name": "I Saw Black Clouds",
-            "description": "After the unexpected death of a close friend, Kristina returns to her hometown looking for answers, only to unearth a string of dark secrets. I Saw Black Clouds is an interactive psychological thriller with supernatural elements and branching storylines.",
-            "price": 135,
-            "picture": "https://cdn1.epicgames.com/spt-assets/8a9ed55b9194493a840486b58ac6c404/i-saw-black-clouds-3tu74.png?h=854&resize=1&w=640",
-            "type": "Horror",
-            "id": 3
-        },
-        
-        {
-            "name": "Liberated",
-            "description": "Погрузитесь в приключенческую игру в игровом комиксе ручной работы. Познакомьтесь с пугающе реалистичной реальностью, где права человека постепенно умирают. Присоединитесь к восстанию и решайте головоломки в мрачном дождливом городе, который отчаянно нуждается в правосудии.",
-            "price": 9.99,
-            "picture": "https://cdn1.epicgames.com/spt-assets/7fd889f14b0c44529299484a1ec719c8/download-liberated-offer-artel.jpg?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        
-        {
-            "name": "Dishonored 2",
-            "description": "Действие игры Dishonored 2 разворачивается спустя пятнадцать лет после победы над лордом-регентом. Необычный враг отнял трон у императрицы Эмили Колдуин. Играя за Эмили или Корво, отправляйтесь в Карнаку, чтобы выследить ваших врагов и вернуть то, что принадлежит вам по праву.",
-            "price": 29.99,
-            "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        
-        {
-            "name": "Сэкбой Большое приключение",
-            "description": "Легендарный Сэкбой приходит с PlayStation® на ПК, чтобы участвовать в грандиозном трёхмерном платформенном приключении. • Эпическое путешествие с платформенными испытаниями. • Захватывающее управление. • Хаотичная, весёлая и творческая совместная игра.",
-            "price": 39.49,
-            "picture": "https://cdn1.epicgames.com/offer/1b60f39de33b4902a8d5fa543b1fb628/EGS_SackboyABigAdventure_SumoDigital_S2_1200x1600-cc68022e4d17a383c8571dc43586353c?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        
-
-        {
-            "name": "Рыцари Готэма",
-            "description": "Бэтмен мёртв. Теперь всё зависит от семьи Бэтмена: Бэтгёрл, Найтвинга, Красного Колпака и Робина. Только они способны защитить Готэм-Сити.",
-            "price": 12.29,
-            "picture": "https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnights_WarnerBrosGamesMontreal_S2_1200x1600-5a46b442e57afa637f013bbc09fe5487?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        
-        {
-            "name": "Realm Royale Reforged",
-            "description": "Присоединяйтесь к более чем 20 миллионам игроков и попробуйте совершенно особый тип королевской битвы с Realm Royale Reforged! Выберите свой класс, создайте смертоносное оружие и освойте потрясающие способности, чтобы выстоять и победить. Отправляйтесь вперед в одиночестве или собирайте команду, чтобы исследовать удивительный мир и спасаться от смертоносного тумана.",
-            "price": 2.99,
-            "picture": "https://cdn1.epicgames.com/offer/5fcf6f3031c547f789e29c18b422ca67/RRR_Release_BoxArt_EGS_PortraitImage_860x1148_deepseabyte_860x1148-cb539107c69f48307d0c09e083e72a2b?h=854&resize=1&w=640",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "Cities: Skylines",
-            "description": "Единственный путь — вверх! Дотянитесь до неба с авторским комплектом «Небоскрёбы» (Skyscrapers) от Feindbold. В комплект включено 24 уникальных небоскрёба и 20 их вариаций в стиле узнаваемых зданий со всего мира.",
-            "price": 2.99,
-            "picture": "https://cdn1.epicgames.com/offer/6009be9994c2409099588cde6f3a5ed0/EGS_CitiesSkylinesCCPHeartofKorea_ColossalOrder_DLC_S2_1200x1600-70cfbd3ec451d31b5b64f4d2545ddb20?h=854&resize=1&w=640",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        
-        {
-            "name": "Dishonored 2",
-            "description": "Действие игры Dishonored 2 разворачивается спустя пятнадцать лет после победы над лордом-регентом. Необычный враг отнял трон у императрицы Эмили Колдуин. Играя за Эмили или Корво, отправляйтесь в Карнаку, чтобы выследить ваших врагов и вернуть то, что принадлежит вам по праву.",
-            "price": 29.99,
-            "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-        
-        {
-            "name": "Timewell: Trail Of Celestes",
-            "description": "Timewell: Trail of Celestes is an old-school story-driven 4 DOF 3D space shooter RPG. As A.I. SAT-V, explore exotic planets and fight with Constructs in an ever-deepening plot. Change her skills and adaptations on the fly. May you guide SAT-V to her destiny?",
-            "price": 12.99,
-            "picture": "https://cdn1.epicgames.com/spt-assets/6e0edb69052f4f8a853fb8a60bde8eb8/timewell_trail_of_celestes-1gg9e.jpg?h=854&resize=1&w=640",
-            "type": "Action",
-            "id": 3
-        },
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        },
-        
-        {
-            "name": "",
-            "description": "",
-            "price": 135,
-            "picture": "",
-            "type": "game",
-            "id": 3
-        }
-        
-        
-    ]
+  "products": [
+    {
+      "name": "BLACKTAIL",
+      "description": "Создайте свою легенду о Бабе-Яге, девочке, которую обвинили в колдовстве и выгнали из дома. Освойте стрельбу из лука, научитесь творить магию и раскройте мрачные тайны пышущего жизнью сказочного мира, навеянного славянской мифологией.",
+      "price": "18.39",
+      "picture": "https://cdn1.epicgames.com/offer/a17cc66c3a3c4d75875febf281c73fd2/EGS_BLACKTAIL_THEPARASIGHT_S2_1200x1600-a87fc356f4792b9b0de74b2d1a10cd26?h=854&resize=1&w=640",
+      "type": "Shuter",
+      "id": 1
+    },
+    {
+      "name": "Tom Clancy's Rainbow",
+      "description": "Tom Clancy's Rainbow Six® Осада — это элитный тактический командный шутер, где побеждает сторона, которая лучше продумает и исполнит свой план.",
+      "price": 4.39,
+      "picture": "https://cdn1.epicgames.com/offer/carnation/Carousel_BoxArt_1200x1600_1200x1600-6888b9d57181d8fcfb3472a7f70ecc49?h=854&resize=1&w=640",
+      "type": "Shuter",
+      "id": 2
+    },
+    {
+      "name": "Timewell: Trail Of Celestes",
+      "description": "Timewell: Trail of Celestes is an old-school story-driven 4 DOF 3D space shooter RPG. As A.I. SAT-V, explore exotic planets and fight with Constructs in an ever-deepening plot. Change her skills and adaptations on the fly. May you guide SAT-V to her destiny?",
+      "price": 12.99,
+      "picture": "https://cdn1.epicgames.com/spt-assets/6e0edb69052f4f8a853fb8a60bde8eb8/timewell_trail_of_celestes-1gg9e.jpg?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "I Saw Black Clouds",
+      "description": "After the unexpected death of a close friend, Kristina returns to her hometown looking for answers, only to unearth a string of dark secrets. I Saw Black Clouds is an interactive psychological thriller with supernatural elements and branching storylines.",
+      "price": 135,
+      "picture": "https://cdn1.epicgames.com/spt-assets/8a9ed55b9194493a840486b58ac6c404/i-saw-black-clouds-3tu74.png?h=854&resize=1&w=640",
+      "type": "Horror",
+      "id": 3
+    },
+    {
+      "name": "Liberated",
+      "description": "Погрузитесь в приключенческую игру в игровом комиксе ручной работы. Познакомьтесь с пугающе реалистичной реальностью, где права человека постепенно умирают. Присоединитесь к восстанию и решайте головоломки в мрачном дождливом городе, который отчаянно нуждается в правосудии.",
+      "price": 9.99,
+      "picture": "https://cdn1.epicgames.com/spt-assets/7fd889f14b0c44529299484a1ec719c8/download-liberated-offer-artel.jpg?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "Dishonored 2",
+      "description": "Действие игры Dishonored 2 разворачивается спустя пятнадцать лет после победы над лордом-регентом. Необычный враг отнял трон у императрицы Эмили Колдуин. Играя за Эмили или Корво, отправляйтесь в Карнаку, чтобы выследить ваших врагов и вернуть то, что принадлежит вам по праву.",
+      "price": 29.99,
+      "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "Сэкбой Большое приключение",
+      "description": "Легендарный Сэкбой приходит с PlayStation® на ПК, чтобы участвовать в грандиозном трёхмерном платформенном приключении. • Эпическое путешествие с платформенными испытаниями. • Захватывающее управление. • Хаотичная, весёлая и творческая совместная игра.",
+      "price": 39.49,
+      "picture": "https://cdn1.epicgames.com/offer/1b60f39de33b4902a8d5fa543b1fb628/EGS_SackboyABigAdventure_SumoDigital_S2_1200x1600-cc68022e4d17a383c8571dc43586353c?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "Рыцари Готэма",
+      "description": "Бэтмен мёртв. Теперь всё зависит от семьи Бэтмена: Бэтгёрл, Найтвинга, Красного Колпака и Робина. Только они способны защитить Готэм-Сити.",
+      "price": 12.29,
+      "picture": "https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnights_WarnerBrosGamesMontreal_S2_1200x1600-5a46b442e57afa637f013bbc09fe5487?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "Realm Royale Reforged",
+      "description": "Присоединяйтесь к более чем 20 миллионам игроков и попробуйте совершенно особый тип королевской битвы с Realm Royale Reforged! Выберите свой класс, создайте смертоносное оружие и освойте потрясающие способности, чтобы выстоять и победить. Отправляйтесь вперед в одиночестве или собирайте команду, чтобы исследовать удивительный мир и спасаться от смертоносного тумана.",
+      "price": 2.99,
+      "picture": "https://cdn1.epicgames.com/offer/5fcf6f3031c547f789e29c18b422ca67/RRR_Release_BoxArt_EGS_PortraitImage_860x1148_deepseabyte_860x1148-cb539107c69f48307d0c09e083e72a2b?h=854&resize=1&w=640",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "Cities: Skylines",
+      "description": "Единственный путь — вверх! Дотянитесь до неба с авторским комплектом «Небоскрёбы» (Skyscrapers) от Feindbold. В комплект включено 24 уникальных небоскрёба и 20 их вариаций в стиле узнаваемых зданий со всего мира.",
+      "price": 2.99,
+      "picture": "https://cdn1.epicgames.com/offer/6009be9994c2409099588cde6f3a5ed0/EGS_CitiesSkylinesCCPHeartofKorea_ColossalOrder_DLC_S2_1200x1600-70cfbd3ec451d31b5b64f4d2545ddb20?h=854&resize=1&w=640",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "Dishonored 2",
+      "description": "Действие игры Dishonored 2 разворачивается спустя пятнадцать лет после победы над лордом-регентом. Необычный враг отнял трон у императрицы Эмили Колдуин. Играя за Эмили или Корво, отправляйтесь в Карнаку, чтобы выследить ваших врагов и вернуть то, что принадлежит вам по праву.",
+      "price": 29.99,
+      "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "Timewell: Trail Of Celestes",
+      "description": "Timewell: Trail of Celestes is an old-school story-driven 4 DOF 3D space shooter RPG. As A.I. SAT-V, explore exotic planets and fight with Constructs in an ever-deepening plot. Change her skills and adaptations on the fly. May you guide SAT-V to her destiny?",
+      "price": 12.99,
+      "picture": "https://cdn1.epicgames.com/spt-assets/6e0edb69052f4f8a853fb8a60bde8eb8/timewell_trail_of_celestes-1gg9e.jpg?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 135,
+      "picture": "",
+      "type": "game",
+      "id": 3
+    },
+    {
+      "name": "erewr",
+      "description": "3er3e",
+      "price": 433,
+      "picture": "3er3",
+      "type": "3er",
+      "id": 4
+    }
+  ]
 }

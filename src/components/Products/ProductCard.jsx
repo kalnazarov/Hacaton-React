@@ -59,7 +59,7 @@ const ProductCard = ({ item }) => {
                     marginTop: '13px',
                     width: '100%',
                     textAlign: 'left',
-                    color:'gray',
+                    color:'white',
                     fontSize: {
                         xs: '10px',
                         sm: '12px',
