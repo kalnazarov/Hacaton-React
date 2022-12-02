@@ -10,6 +10,8 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import "./style.css";
+import HomeCard from "../HomeCard/HomeCard";
+
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -22,22 +24,22 @@ const images = [
     {
         label: "Bird",
         imgPath:
-            "https://cdn2.unrealengine.com/egs-fall-guys-season-3-carousel-desktop-1248x702-45e1348ce06e.jpg?h=1080&resize=1&w=1920",
+            "https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontreal-s1-1920x1080-1920x1080-6b66ac601978.jpg?h=720&resize=1&w=1280",
     },
     {
         label: "Bali, Indonesia",
         imgPath:
-            "https://cdn2.unrealengine.com/key-art-1920x1080-3251a6ec218c.jpg",
+            "https://cdn2.unrealengine.com/inspiration-marvels-spider-man-miles-morales-3840x2160-ba596ec24d23.jpg?h=480&resize=1&w=854",
     },
     {
-        label: "Goč, Serbia",
+        label: "sdfsdfsdf",
         imgPath:
-            "https://media.contentapi.ea.com/content/dam/apex-legends/common/apex-hunted-primary-thumbnail.jpg.adapt.crop191x100.628p.jpg",
+            "https://www.egames.news/__export/1604687536822/sites/debate/img/2020/11/06/all_out_y_el_xlbum_del_grupo_kda_de_league_of_legends.jpg_242310155.jpg",
     },
     {
-        label: "Goč, Serbia",
+        label: "sdfsdf",
         imgPath:
-            "https://media.contentapi.ea.com/content/dam/apex-legends/common/apex-hunted-primary-thumbnail.jpg.adapt.crop191x100.628p.jpg",
+            "https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-01-1920x1080-dd83896256e8.jpg",
     },
 ];
 
@@ -64,13 +66,14 @@ function Carousel() {
                 // display: "flex",
                 // justifyContent: "space-evenly",
                 pt: "100px",
+                // pb: "50px",
+               
             }}
         >
             <Box
                 sx={{
-                    maxWidth: 1000,
+                    maxWidth: 995,
                     flexGrow: 1,
-                    boxShadow: "-1px -1px 51px 11px rgba(255,255,255,0.75)",
                 }}
             >
                 <AutoPlaySwipeableViews
@@ -85,9 +88,10 @@ function Carousel() {
                                 <Box
                                     component="img"
                                     sx={{
+                                        border: "2px solid white",
                                         height: 255,
                                         display: "block",
-                                        maxWidth: 1000,
+                                        maxWidth: 990,
                                         overflow: "hidden",
                                         width: "100%",
                                         height: "500px",
@@ -103,16 +107,19 @@ function Carousel() {
                     sx={{
                         pt: "10px",
                         color: "white",
-                        backgroundImage: `url(${"https://cdn.eso.org/images/thumb700x/potw1428a.jpg"})`,
+                        // backgroundImage: `url(${"https://cdn.eso.org/images/thumb700x/potw1428a.jpg"})`,
                         textAlign: "center",
+                        backgroundColor: "#2a2a2a",
                         fontSize: "30px",
+                        boxShadow: "-1px -1px 51px 11px rgba(255,255,255,0.75)",
                     }}
                 >
                     {images[activeStep].label}
                 </Typography>
                 <MobileStepper
                     sx={{
-                        backgroundImage: `url(${"https://cdn.eso.org/images/thumb700x/potw1428a.jpg"})`,
+                        // backgroundImage: `url(${"https://cdn.eso.org/images/thumb700x/potw1428a.jpg"})`,
+                        backgroundColor: "#2a2a2a",
                     }}
                     steps={maxSteps}
                     position="static"
@@ -148,6 +155,7 @@ function Carousel() {
                         </Button>
                     }
                 />
+                <HomeCard />
             </Box>
         </Box>
     );
