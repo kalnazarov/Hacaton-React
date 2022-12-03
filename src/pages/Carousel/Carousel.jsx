@@ -12,7 +12,6 @@ import { autoPlay } from "react-swipeable-views-utils";
 import "./style.css";
 import HomeCard from "../HomeCard/HomeCard";
 
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -66,8 +65,10 @@ function Carousel() {
                 // display: "flex",
                 // justifyContent: "space-evenly",
                 pt: "100px",
+
+                height: "1100px",
+
                 // pb: "50px",
-               
             }}
         >
             <Box
@@ -155,7 +156,9 @@ function Carousel() {
                         </Button>
                     }
                 />
-                <HomeCard />
+                <Box sx={{ display: "flex", justifyContent: "center" ,height:'490px'}}>
+                    <HomeCard />
+                </Box>
             </Box>
         </Box>
     );
