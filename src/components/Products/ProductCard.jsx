@@ -43,7 +43,6 @@ const ProductCard = ({ item }) => {
                     alignItems: "center",
                     justifyContent: "end",
                     backgroundColor: hover ? "green" : "red",
-                   
                 }}
             >
                 <Box
@@ -73,6 +72,7 @@ const ProductCard = ({ item }) => {
                             xl: "10px",
                         },
                     }}
+                    onClick={() => navigate(`/products/${item.id}`)}
                 >
                     Buy
                 </Button>
