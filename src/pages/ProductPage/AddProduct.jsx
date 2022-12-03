@@ -49,8 +49,7 @@ const AddProduct = () => {
         <Box
             align="center"
             sx={{
-                backgroundImage:
-                    "url(https://www.fila.de/out/fila/img/footer-mobile.png)",
+                backgroundColor: "black",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100%",
                 height: "70vh",
