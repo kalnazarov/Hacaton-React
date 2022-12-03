@@ -51,6 +51,7 @@ const MainRoutes = () => {
                     : null}
             </Routes>
         </>
+        // <Box></Box>
     );
 };
 export default MainRoutes;
