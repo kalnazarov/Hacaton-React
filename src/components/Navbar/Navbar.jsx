@@ -242,7 +242,7 @@ export default function Navbar() {
                                 color="inherit"
                                 aria-label="open drawer"
                                 sx={{ mr: 2, display: "none" }}
-                                onClick={() => navigate("/")}
+                                // onClick={() => navigate("/")}
                             >
                                 <img
                                     style={{ width: "15px", height: "15px" }}
