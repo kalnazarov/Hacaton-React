@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import { Menu, MenuItem } from "@mui/material";
+import { Grid, Menu, MenuItem } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useAuth } from "../context/AuthContextProvaider";
@@ -108,6 +108,7 @@ export default function Navbar() {
                             alt=""
                         />
                     </IconButton>
+
                     <Box
                         sx={{
                             display: "flex",
@@ -117,12 +118,18 @@ export default function Navbar() {
                     >
                         <Box display={"flex"}>
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" onClick={() => navigate("/")}> 
+                                <Typography
+                                    textAlign="center"
+                                    onClick={() => navigate("/")}
+                                >
                                     Главная
                                 </Typography>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" onClick={() => navigate("/products")}> 
+                                <Typography
+                                    textAlign="center"
+                                    onClick={() => navigate("/products")}
+                                >
                                     Все игры
                                 </Typography>
                             </MenuItem>
@@ -145,6 +152,7 @@ export default function Navbar() {
                             <IconButton>
                                 <ShoppingCartCheckoutIcon
                                     sx={{ color: "white" }}
+                                    onClick={() => navigate("/cart")}
                                 />
                             </IconButton>
                             <IconButton
@@ -157,15 +165,94 @@ export default function Navbar() {
                             ></IconButton>
                         </Box>
                     </Box>
+
+                    <Grid>
+                        {email ? (
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="open drawer"
+                                sx={{ mr: 2, display: "flex" }}
+                                onClick={() => navigate("/")}
+                            >
+                                <img
+                                    style={{
+                                        width: "15px",
+                                        height: "15px",
+                                        paddingRight: "10px",
+                                    }}
+                                    src="https://img.icons8.com/emoji/512/green-circle-emoji.png"
+                                    alt=""
+                                />
+                                <Typography onClick={handleMenu}>
+                                    {email}
+                                </Typography>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={anchorEl}
+                                    keepMounted
+                                   
+                                    open={Boolean(anchorEl)}
+                                    onClose={handleClose}
+                                >
+                                    <MenuItem onClick={handleClose}>
+                                        <MenuItem onClick={handleLogout}>
+                                            <Typography
+                                                sx={{
+                                                    textAlign: "center",
+                                                    color: "black",
+                                                    fontWeight: "bold",
+                                                    textShadow: "black",
+                                                    display: "flex",
+                                                    width: "120px",
+                                                }}
+                                            >
+                                                Logout
+                                            </Typography>
+                                           
+                                        </MenuItem>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        My account
+                                    </MenuItem>
+                                </Menu>
+                            </IconButton>
+                        ) : (
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="open drawer"
+                                sx={{ mr: 2, display: "none" }}
+                                onClick={() => navigate("/")}
+                            >
+                                <img
+                                    style={{ width: "15px", height: "15px" }}
+                                    src="https://img.icons8.com/emoji/512/green-circle-emoji.png"
+                                    alt=""
+                                />
+                            </IconButton>
+                        )}
+                    </Grid>
+
                     <Box sx={{ flexGrow: 0 }}>
                         {email ? (
                             <MenuItem onClick={handleLogout}>
                                 <Typography
-                                    sx={{ textAlign: "center", color: "white" }}
+                                    sx={{
+                                        textAlign: "center",
+                                        color: "white",
+                                        fontWeight: "bold",
+                                        textShadow: "black",
+                                        display: "none",
+                                    }}
                                 >
                                     Logout
                                 </Typography>
-                                <AccountCircle sx={{ color: "white" }} />
+                                <AccountCircle
+                                    sx={{ color: "white", paddingLeft: "10px" }}
+                                />
                             </MenuItem>
                         ) : (
                             <Link
@@ -180,11 +267,17 @@ export default function Navbar() {
                                         sx={{
                                             textAlign: "center",
                                             color: "white",
+                                            fontWeight: "bold",
                                         }}
                                     >
                                         Login
                                     </Typography>
-                                    <AccountCircle sx={{ color: "white" }} />
+                                    <AccountCircle
+                                        sx={{
+                                            color: "white",
+                                            paddingLeft: "10px",
+                                        }}
+                                    />
                                 </MenuItem>
                             </Link>
                         )}

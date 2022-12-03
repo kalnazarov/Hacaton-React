@@ -11,7 +11,7 @@
     {
       "name": "Tom Clancy's Rainbow",
       "description": "Tom Clancy's Rainbow Six® Осада — это элитный тактический командный шутер, где побеждает сторона, которая лучше продумает и исполнит свой план.",
-      "price": 4.39,
+      "price": "4.50",
       "picture": "https://cdn1.epicgames.com/offer/carnation/Carousel_BoxArt_1200x1600_1200x1600-6888b9d57181d8fcfb3472a7f70ecc49?h=854&resize=1&w=640",
       "type": "Shuter",
       "id": 2
@@ -27,7 +27,7 @@
     {
       "name": "I Saw Black Clouds",
       "description": "After the unexpected death of a close friend, Kristina returns to her hometown looking for answers, only to unearth a string of dark secrets. I Saw Black Clouds is an interactive psychological thriller with supernatural elements and branching storylines.",
-      "price": 135,
+      "price": "13.5",
       "picture": "https://cdn1.epicgames.com/spt-assets/8a9ed55b9194493a840486b58ac6c404/i-saw-black-clouds-3tu74.png?h=854&resize=1&w=640",
       "type": "Horror",
       "id": 4
@@ -231,14 +231,6 @@
       "picture": "",
       "type": "game",
       "id": 30
-    },
-    {
-      "name": "asdasd",
-      "description": "asdasd",
-      "price": 23424,
-      "picture": "sadasd",
-      "type": "asdasd",
-      "id": 31
     }
   ]
 }
