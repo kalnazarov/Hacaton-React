@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Box, Typography, Button } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { Box, Typography, Button, IconButton } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import zIndex from "@mui/material/styles/zIndex";
+import { useProducts } from "../context/ProductContextProvaider";
+import { useCart } from "../context/CartContextProvaider";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 const ProductCard = ({ item }) => {
     const navigate = useNavigate();
     const [hover, setHover] = useState(false);
-    // function handle(e) {
-    //     changeBackground(e);
-    // }
 
-    // const changeBackground = (e) => {
-    //     e.target.style.display = "flex";
-    // };
+    // console.log(item);
+    const { addProductToCart, checkProductInCart, deleteCartProduct } =
+        useCart();
+
     return (
         <Box
             sx={{
@@ -53,12 +53,25 @@ const ProductCard = ({ item }) => {
                         color: "white",
                     }}
                 >
-                    <AddCircleOutlineIcon sx={{ pb: "265px", pl: "160px" }} />
+                    {checkProductInCart(item.id) ? (
+                        <Box onClick={() => addProductToCart(item)}>
+                            <RemoveCircleOutlineIcon
+                                sx={{ pb: "265px", pl: "160px" }}
+                            />
+                        </Box>
+                    ) : (
+                        <Box onClick={() => addProductToCart(item)}>
+                            
+                            <AddCircleOutlineIcon
+                                sx={{ pb: "265px", pl: "160px" }}
+                            />
+                        </Box>
+                    )}
                 </Box>
 
                 <Button
                     sx={{
-                        backgroundColor: "#3399ff",
+                        backgroundColor: "gray",
                         width: "50%",
                         color: "white",
                         marginTop: "130%",
