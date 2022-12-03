@@ -8,11 +8,12 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import { Grid, Menu, MenuItem } from "@mui/material";
+import { Button, Grid, Menu, MenuItem } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useAuth } from "../context/AuthContextProvaider";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { ADMIN } from "../../helpers/const";
 
 const pages = ["Главная", "Все игры", "Новости"];
 
@@ -94,7 +95,7 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
 
-                    <IconButton
+                    <Box
                         size="large"
                         edge="start"
                         color="inherit"
@@ -107,7 +108,7 @@ export default function Navbar() {
                             src="https://seeklogo.com/images/E/epic-games-logo-A9D86272DC-seeklogo.com.png"
                             alt=""
                         />
-                    </IconButton>
+                    </Box>
 
                     <Box
                         sx={{
@@ -138,6 +139,24 @@ export default function Navbar() {
                                     О нас
                                 </Typography>
                             </MenuItem>
+                            <Box
+                                sx={{
+                                    flexGrow: 1,
+                                    display: { xs: "none", md: "flex" },
+                                }}
+                            >
+                                {email === ADMIN ? (
+                                    <Button
+                                        onClick={() => navigate("/admin")}
+                                        sx={{ textAlign: "center" }}
+                                        color="inherit"
+                                    >
+                                        Добавить игру
+                                    </Button>
+                                ) : (
+                                    <></>
+                                )}
+                            </Box>
                         </Box>
                         <Box display={"flex"} alignItems={"center"}>
                             <Search>
@@ -192,7 +211,6 @@ export default function Navbar() {
                                     id="menu-appbar"
                                     anchorEl={anchorEl}
                                     keepMounted
-                                   
                                     open={Boolean(anchorEl)}
                                     onClose={handleClose}
                                 >
@@ -210,7 +228,6 @@ export default function Navbar() {
                                             >
                                                 Logout
                                             </Typography>
-                                           
                                         </MenuItem>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>

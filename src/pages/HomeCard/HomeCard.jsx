@@ -46,8 +46,8 @@ export default function HomeCard() {
                     backgroundColor: "transparent",
                 }}
             >
-                {image.map((step) => (
-                    <div>
+                {image.map((step,index) => (
+                    <div key={index}>
                         <Box
                             component="img"
                             sx={{
@@ -58,7 +58,7 @@ export default function HomeCard() {
                                 borderRadius: "10px",
                                 border: "2px solid white",
                             }}
-                            src={step.img}
+                            src={step.img} 
                         />
 
                         <CardActionArea

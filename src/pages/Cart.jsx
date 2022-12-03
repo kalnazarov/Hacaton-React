@@ -78,7 +78,7 @@ export default function Cart() {
                             <p className="subprice">${row.subPrice}</p>
                         </td>
 
-                        <td className="cart-phone">
+                        {/* <td className="cart-phone">
                             <img
                                 className="cartimg"
                                 src={row.item.picture}
@@ -116,8 +116,10 @@ export default function Cart() {
                                 <p className="subprice">
                                     Subtotal: ${row.subPrice}
                                 </p>
+                                <p>${cart.totalPrice}</p>
+                                <p>${cart.totalPrice}</p>
                             </div>
-                        </td>
+                        </td> */}
                     </tr>
                 ))}
             </tbody>

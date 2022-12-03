@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ACTIONS, JSON_API_PRODUCRTS } from "../../helpers/const";
+import { ACTIONS, JSON_API_PRODUCTS } from "../../helpers/const";
 
 export const productContext = createContext();
 // const location = useLocation();
@@ -31,13 +31,13 @@ const ProductContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
     async function addProduct(newProduct) {
-        await axios.post(JSON_API_PRODUCRTS, newProduct);
+        await axios.post(JSON_API_PRODUCTS, newProduct);
         getProducts();
     }
 
     async function getProducts() {
         const { data } = await axios(
-            `${JSON_API_PRODUCRTS}${window.location.search}`
+            `${JSON_API_PRODUCTS}${window.location.search}`
         );
         dispatch({
             type: ACTIONS.GET_PRODUCTS,
@@ -46,7 +46,7 @@ const ProductContextProvider = ({ children }) => {
     }
 
     async function getProductDetails(id) {
-        const { data } = await axios(`${JSON_API_PRODUCRTS}/${id}`);
+        const { data } = await axios(`${JSON_API_PRODUCTS}/${id}`);
         dispatch({
             type: ACTIONS.GET_PRODUCT_DETAILS,
             payload: data,
@@ -54,12 +54,12 @@ const ProductContextProvider = ({ children }) => {
     }
 
     async function saveEditedProduct(newProduct, id) {
-        await axios.patch(`${JSON_API_PRODUCRTS}/${id}`, newProduct);
+        await axios.patch(`${JSON_API_PRODUCTS}/${id}`, newProduct);
         getProducts();
     }
 
     async function deleteProduct(id) {
-        await axios.delete(`${JSON_API_PRODUCRTS}/${id}`);
+        await axios.delete(`${JSON_API_PRODUCTS}/${id}`);
         getProducts();
     }
     //! Filter
