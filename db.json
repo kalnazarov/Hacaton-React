@@ -30,7 +30,7 @@
       "price": 135,
       "picture": "https://cdn1.epicgames.com/spt-assets/8a9ed55b9194493a840486b58ac6c404/i-saw-black-clouds-3tu74.png?h=854&resize=1&w=640",
       "type": "Horror",
-      "id": 3
+      "id": 4
     },
     {
       "name": "Liberated",
@@ -38,23 +38,15 @@
       "price": 9.99,
       "picture": "https://cdn1.epicgames.com/spt-assets/7fd889f14b0c44529299484a1ec719c8/download-liberated-offer-artel.jpg?h=854&resize=1&w=640",
       "type": "Action",
-      "id": 3
+      "id": 5
     },
     {
-      "name": "Dishonored 2",
-      "description": "Действие игры Dishonored 2 разворачивается спустя пятнадцать лет после победы над лордом-регентом. Необычный враг отнял трон у императрицы Эмили Колдуин. Играя за Эмили или Корво, отправляйтесь в Карнаку, чтобы выследить ваших врагов и вернуть то, что принадлежит вам по праву.",
-      "price": 29.99,
-      "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
-      "type": "Action",
-      "id": 3
-    },
-    {
-      "name": "Сэкбой Большое приключение",
+      "name": "Сэкбой Большое ",
       "description": "Легендарный Сэкбой приходит с PlayStation® на ПК, чтобы участвовать в грандиозном трёхмерном платформенном приключении. • Эпическое путешествие с платформенными испытаниями. • Захватывающее управление. • Хаотичная, весёлая и творческая совместная игра.",
       "price": 39.49,
       "picture": "https://cdn1.epicgames.com/offer/1b60f39de33b4902a8d5fa543b1fb628/EGS_SackboyABigAdventure_SumoDigital_S2_1200x1600-cc68022e4d17a383c8571dc43586353c?h=854&resize=1&w=640",
       "type": "Action",
-      "id": 3
+      "id": 7
     },
     {
       "name": "Рыцари Готэма",
@@ -62,7 +54,7 @@
       "price": 12.29,
       "picture": "https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnights_WarnerBrosGamesMontreal_S2_1200x1600-5a46b442e57afa637f013bbc09fe5487?h=854&resize=1&w=640",
       "type": "Action",
-      "id": 3
+      "id": 8
     },
     {
       "name": "Realm Royale Reforged",
@@ -70,7 +62,7 @@
       "price": 2.99,
       "picture": "https://cdn1.epicgames.com/offer/5fcf6f3031c547f789e29c18b422ca67/RRR_Release_BoxArt_EGS_PortraitImage_860x1148_deepseabyte_860x1148-cb539107c69f48307d0c09e083e72a2b?h=854&resize=1&w=640",
       "type": "game",
-      "id": 3
+      "id": 9
     },
     {
       "name": "Cities: Skylines",
@@ -78,7 +70,7 @@
       "price": 2.99,
       "picture": "https://cdn1.epicgames.com/offer/6009be9994c2409099588cde6f3a5ed0/EGS_CitiesSkylinesCCPHeartofKorea_ColossalOrder_DLC_S2_1200x1600-70cfbd3ec451d31b5b64f4d2545ddb20?h=854&resize=1&w=640",
       "type": "game",
-      "id": 3
+      "id": 10
     },
     {
       "name": "Dishonored 2",
@@ -86,7 +78,7 @@
       "price": 29.99,
       "picture": "https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=854&resize=1&w=640",
       "type": "Action",
-      "id": 3
+      "id": 12
     },
     {
       "name": "Timewell: Trail Of Celestes",
@@ -94,7 +86,15 @@
       "price": 12.99,
       "picture": "https://cdn1.epicgames.com/spt-assets/6e0edb69052f4f8a853fb8a60bde8eb8/timewell_trail_of_celestes-1gg9e.jpg?h=854&resize=1&w=640",
       "type": "Action",
-      "id": 3
+      "id": 13
+    },
+    {
+      "name": "Сэкбой Большое ",
+      "description": "Легендарный Сэкбой приходит с PlayStation® на ПК, чтобы участвовать в грандиозном трёхмерном платформенном приключении. • Эпическое путешествие с платформенными испытаниями. • Захватывающее управление. • Хаотичная, весёлая и творческая совместная игра.",
+      "price": 39.49,
+      "picture": "https://cdn1.epicgames.com/offer/1b60f39de33b4902a8d5fa543b1fb628/EGS_SackboyABigAdventure_SumoDigital_S2_1200x1600-cc68022e4d17a383c8571dc43586353c?h=854&resize=1&w=640",
+      "type": "Action",
+      "id": 7
     },
     {
       "name": "",
@@ -102,7 +102,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 14
     },
     {
       "name": "",
@@ -110,7 +110,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 15
     },
     {
       "name": "",
@@ -118,7 +118,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 16
     },
     {
       "name": "",
@@ -126,7 +126,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 17
     },
     {
       "name": "",
@@ -134,7 +134,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 18
     },
     {
       "name": "",
@@ -142,7 +142,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 19
     },
     {
       "name": "",
@@ -150,7 +150,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 20
     },
     {
       "name": "",
@@ -158,7 +158,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 21
     },
     {
       "name": "",
@@ -166,7 +166,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 22
     },
     {
       "name": "",
@@ -174,7 +174,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 23
     },
     {
       "name": "",
@@ -182,7 +182,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 24
     },
     {
       "name": "",
@@ -190,7 +190,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 25
     },
     {
       "name": "",
@@ -198,7 +198,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 26
     },
     {
       "name": "",
@@ -206,7 +206,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 27
     },
     {
       "name": "",
@@ -214,7 +214,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 28
     },
     {
       "name": "",
@@ -222,7 +222,7 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 29
     },
     {
       "name": "",
@@ -230,15 +230,15 @@
       "price": 135,
       "picture": "",
       "type": "game",
-      "id": 3
+      "id": 30
     },
     {
-      "name": "erewr",
-      "description": "3er3e",
-      "price": 433,
-      "picture": "3er3",
-      "type": "3er",
-      "id": 4
+      "name": "asdasd",
+      "description": "asdasd",
+      "price": 23424,
+      "picture": "sadasd",
+      "type": "asdasd",
+      "id": 31
     }
   ]
 }

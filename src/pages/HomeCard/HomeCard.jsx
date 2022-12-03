@@ -27,7 +27,12 @@ export default function HomeCard() {
     const [value, setValue] = React.useState(4);
 
     return (
-        <Box sx={{ maxWidth: "100%", mt: "50px" }}>
+        <Box
+            sx={{
+                maxWidth: "90%",
+                mt: "50px",
+            }}
+        >
             <Box
                 sx={{
                     "& > legend": { mt: 4 },
@@ -38,11 +43,7 @@ export default function HomeCard() {
                     display: "flex",
                     justifyContent: "space-between",
 
-                   
-
                     backgroundColor: "transparent",
-
-                   
                 }}
             >
                 {image.map((step) => (
@@ -68,6 +69,10 @@ export default function HomeCard() {
                                 alignItems: "center",
                                 width: "95%",
                                 color: "white",
+                                // backgroundColor: "black",
+                                backgroundImage: `url(${"https://proprikol.ru/wp-content/uploads/2020/03/rozovyj-czvet-krasivye-kartinki-43-1-650x366.jpg"})`,
+                                border: "2px solid white",
+                                borderRadius: "20px",
                                 textShadow:
                                     " 1px 1px 2px black, 0 0 1em gray, 0 0 0.2em gray",
                             }}
@@ -86,7 +91,7 @@ export default function HomeCard() {
                                         fontSize: "15px",
                                         textShadow:
                                             " 1px 1px 2px black, 0 0 1em gray, 0 0 0.2em gray",
-                                        color: "gray",
+                                        color: "white",
                                     }}
                                 >
                                     {step.decription}
@@ -94,7 +99,7 @@ export default function HomeCard() {
                                 <Rating
                                     name="simple-controlled"
                                     value={value}
-                                    onChange={(event, newValue) => {
+                                    onChange={( newValue) => {
                                         setValue(newValue);
                                     }}
                                 />
@@ -113,6 +118,7 @@ export default function HomeCard() {
                                         Buy
                                     </Button>
                                     <Typography
+                                        sx={{ mb: "0px" }}
                                         gutterBottom
                                         variant="h6"
                                         component="div"

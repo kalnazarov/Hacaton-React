@@ -28,7 +28,7 @@ const ProductList = ({ currentData }) => {
         >
             {products ? (
                 currentData().map((item) => (
-                    <ProductCard key={item.id} item={item} />
+                    <ProductCard  key={item.id} item={item} />
                 ))
             ) : (
                 <></>
