@@ -8,12 +8,14 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import { Button, Grid, Menu, MenuItem } from "@mui/material";
+import { Badge, Button, Grid, Menu, MenuItem } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useAuth } from "../context/AuthContextProvaider";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ADMIN } from "../../helpers/const";
+import { useCart } from "../context/CartContextProvaider";
+import { getCountProductsInCart } from "../../helpers/functions";
 
 const pages = ["Главная", "Все игры", "Новости"];
 
@@ -60,6 +62,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+    const { addProductToCart } = useCart();
+    const [count, setCount] = React.useState(0);
+    React.useEffect(() => {
+        setCount(getCountProductsInCart);
+    }, [addProductToCart]);
     const {
         user: { email },
         handleLogout,
@@ -169,10 +176,12 @@ export default function Navbar() {
                                 />
                             </Search>
                             <IconButton>
+                                {/* <Badge badgeContent={count} color="warningg"> */}
                                 <ShoppingCartCheckoutIcon
                                     sx={{ color: "white" }}
                                     onClick={() => navigate("/cart")}
                                 />
+                                {/* </Badge> */}
                             </IconButton>
                             <IconButton
                                 size="large"
