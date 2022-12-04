@@ -9,6 +9,7 @@ import CartPage from "../pages/CartPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import EditProductPage from "../pages/ProductPage/EditProductPage";
 import ProductsPage from "../pages/ProductPage/ProductPage";
+import VoprosPage from "../pages/VoprosPage";
 
 const MainRoutes = () => {
     const { user } = useAuth();
@@ -19,6 +20,7 @@ const MainRoutes = () => {
         { link: "/products", element: <ProductsPage />, id: 3 },
         { link: "/products/:id", element: <ProductDetailsPage />, id: 5 },
         { link: "/cart", element: <CartPage />, id: 10 },
+        { link: "/vopros", element: <VoprosPage />, id: 20 },
     ];
     const PRIVATE_ROUTES = [
         { link: "/edit/:id", element: <EditProductPage />, id: 7 },

@@ -10,16 +10,21 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLinkClickHandler, useNavigate, useParams } from "react-router-dom";
 
 import { Button, CardContent, Grid } from "@mui/material";
 import { useAuth } from "../components/context/AuthContextProvaider";
 import { useProducts } from "../components/context/ProductContextProvaider";
 import { ADMIN } from "../helpers/const";
+import BoltSharpIcon from "@mui/icons-material/BoltSharp";
+import Comm from "./Comm";
+import { useCart } from "../components/context/CartContextProvaider";
+import WindowRoundedIcon from "@mui/icons-material/WindowRounded";
+import AppleIcon from "@mui/icons-material/Apple";
 
 const ProductDetails = () => {
-    // const { addProductToCart, checkProductInCart } = useCart();
-
+    const { addProductToCart, checkProductInCart } = useCart();
+    const [like, setLike] = useState(false);
     const navigate = useNavigate();
     const { getProductDetails, productDetails, deleteProduct } = useProducts();
     const { id } = useParams();
@@ -59,14 +64,236 @@ const ProductDetails = () => {
     }
 
     return (
-        <Grid sx={{ mb: "50px", mt: "50px" }}>
-            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-                <Grid
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-evenly",
-                    }}
+        <Box sx={{ width: "80%", pt: "110px", pb: "80px", color: "white" }}>
+            <Typography variant="h3" sx={{ color: "white", pb: "10px" }}>
+                {productDetails.name}
+            </Typography>
+
+            <Box
+                sx={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                }}
+            >
+                <Box sx={{ width: "60%" }}>
+                    <iframe
+                        width="100%"
+                        height="490"
+                        src={productDetails.video}
+                    ></iframe>
+
+                    <Typography
+                        variant="h3"
+                        sx={{ textAlign: "center", color: "gray" }}
+                    >
+                        ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+                    </Typography>
+                    <Comm />
+
+                    <p
+                        style={{
+                            height: "150px",
+                            fontSize: "22px",
+                            fontFamily: "Inter,sans-serif",
+                            lineHeight: "30px",
+                            // textAlign: "center",
+                        }}
+                    >
+                        {productDetails.description} <BoltSharpIcon />
+                    </p>
+                </Box>
+                <Box sx={{ width: "20%" }}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            pt: "6px",
+                        }}
+                    >
+                        <img
+                            style={{ width: "90%", height: "320px" }}
+                            src={productDetails.picture}
+                            alt=""
+                        />
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            pt: "11px",
+                            pb: "10px",
+                        }}
+                    >
+                        <Button
+                            sx={{
+                                color: "rgb(245, 245, 245)",
+                                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                                width: "150px",
+                                height: "30px",
+                                fontSize: "11px",
+                            }}
+                        >
+                            Базовая игра
+                        </Button>
+                        <Typography sx={{ pr: "10px", color: "white" }}>
+                            {productDetails.price}.99 $
+                        </Typography>
+                    </Box>
+                    <Box sx={{ pb: "10px" }}>
+                        <Button
+                            sx={{
+                                color: "white",
+                                backgroundColor: "green",
+                                width: "100%",
+                                height: "50px",
+                            }}
+                        >
+                            Купить Сейчас
+                        </Button>
+                    </Box>
+                    {checkProductInCart(productDetails.id) ? (
+                        <Button
+                            variant="contained"
+                            onClick={() => navigate("/cart")}
+                            sx={{
+                                color: "white",
+                                backgroundColor: "transparent",
+                                border: "1px solid gray",
+                                width: "100%",
+                                height: "50px",
+                            }}
+                        >
+                            Посмотреть в корзине
+                        </Button>
+                    ) : (
+                        <Button
+                            variant="contained"
+                            onClick={() => addProductToCart(productDetails)}
+                            sx={{
+                                color: "white",
+                                backgroundColor: "transparent",
+                                border: "1px solid gray",
+                                width: "100%",
+                                height: "50px",
+                            }}
+                        >
+                            Добавить в корзину
+                        </Button>
+                    )}
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            pt: "10px",
+                            borderBottom: "0.5px solid gray",
+                            pb: "3px",
+                        }}
+                    >
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                                color: "gray",
+                            }}
+                        >
+                            Издатель
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                            }}
+                        >
+                            Epic Games
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            pt: "10px",
+                            borderBottom: "0.5px solid gray",
+                            pb: "3px",
+                        }}
+                    >
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                                color: "gray",
+                            }}
+                        >
+                            Разработчик
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                            }}
+                        >
+                            kalnazarov_
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            pt: "10px",
+                            borderBottom: "0.5px solid gray",
+                            pb: "3px",
+                        }}
+                    >
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                                color: "gray",
+                            }}
+                        >
+                            Платформа
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontFamily: "Inter,sans-serif",
+                                fontWeight: "300",
+                                fontSize: "18px",
+                            }}
+                        >
+                            <WindowRoundedIcon sx={{ color: "white" }} />
+                            <AppleIcon sx={{ color: "white" }} />
+                        </Typography>
+                    </Box>
+                    <Box sx={{ pt: "10px" }}>
+                        <Button
+                            variant="contained"
+                            onClick={() => setLike(!like)}
+                            sx={{
+                                color: "white",
+                                backgroundColor: "transparent",
+                                border: "1px solid gray",
+                                width: "100%",
+                                height: "40px",
+                                fontSize: "30px",
+                            }}
+                        >
+                            {like ? "❤️" : " 💔"}
+                        </Button>
+                    </Box>
+                </Box>
+            </Box>
+
+            {/* <Grid
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly",
+                }}
                 >
                     <Button
                         onClick={() => navigate(`/products`)}
@@ -115,21 +342,9 @@ const ProductDetails = () => {
                     ) : (
                         <></>
                     )}
-                </Grid>
-                <Box
-                    sx={{
-                        width: "40%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}
-                >
-                    <Typography gutterBottom variant="h3" component="div">
-                        <img src={productDetails.picture} alt="" />
-                    </Typography>
-                </Box>
+                </Grid> */}
 
-                <Box
+            {/* <Box
                     sx={{
                         width: "40%",
                         display: "flex",
@@ -145,10 +360,6 @@ const ProductDetails = () => {
                             textAlign: "center",
                         }}
                     >
-                        <Typography gutterBottom variant="h3" component="div">
-                            {productDetails.name}
-                        </Typography>
-
                         <Typography sx={{ fontSize: "25px", color: "green" }}>
                             ${productDetails.price}
                         </Typography>
@@ -178,83 +389,9 @@ const ProductDetails = () => {
                                     borderBottom: "1px solid rgb(46, 44, 44)",
                                 }}
                             ></Typography>
-                        </Box>
+                        </Box> */}
 
-                        {/* {checkProductInCart(productDetails.id) ? (
-                            <Button
-                                variant="contained"
-                                onClick={() => addProductToCart(productDetails)}
-                                sx={{
-                                    backgroundColor: "#0a203f",
-                                    color: "white",
-                                    width: "300px",
-                                    height: "55px",
-                                    // mb: "50px",
-                                    borderRadius: "1px",
-                                    font: "16px",
-                                    fontWeight: "600",
-                                }}
-                            >
-                                ALREADY IN BAG
-                            </Button>
-                        ) : (
-                            <Button
-                                variant="contained"
-                                onClick={() => addProductToCart(productDetails)}
-                                sx={{
-                                    backgroundColor: "#0a203f",
-                                    color: "white",
-                                    width: "300px",
-                                    height: "55px",
-                                    // mb: "50px",
-                                    borderRadius: "1px",
-                                    font: "16px",
-                                    fontWeight: "600",
-                                }}
-                            >
-                                {" "}
-                                ADD TO BAG
-                            </Button>
-                        )} */}
-                        <Box
-                            className="sizes__block"
-                            sx={{
-                                width: "100%",
-                                display: "flex",
-                                flexWrap: "wrap",
-                            }}
-                        >
-                            {sizes.map((item, index) => (
-                                <Typography
-                                    sx={{
-                                        cursor: "pointer",
-                                        width: "30px",
-                                        height: "30px",
-                                        border: color
-                                            ? "1px solid red"
-                                            : "1px solid gray",
-                                        borderRadius: "50%",
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        margin: "10px 15px",
-                                        fontSize: "12px",
-                                        color: "grey",
-                                    }}
-                                    key={index}
-                                    onClick={() => {
-                                        sizesIndex(item);
-                                        // changeColor()
-                                    }}
-                                    // onMouseOver={(e) => changeColor(e)}
-                                >
-                                    {item}
-                                </Typography>
-                            ))}
-                        </Box>
-                    </Box>
-
-                    <Box>
+            {/* <Box>
                         <Box sx={{ width: "100%" }}>
                             <Accordion sx={{ width: "100%" }}>
                                 <AccordionSummary
@@ -309,10 +446,8 @@ const ProductDetails = () => {
                                 ></Typography>
                             </Box>
                         </Box>
-                    </Box>
-                </Box>
-            </Box>
-        </Grid>
+                    </Box> */}
+        </Box>
     );
 };
 
