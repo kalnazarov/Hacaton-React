@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect } from "react";
 import { useProducts } from "../../components/context/ProductContextProvaider";
 import ProductCard from "../../components/Products/ProductCard";
+import ProductSortPagination from "./ProductSortPogination";
 
 const ProductList = ({ currentData }) => {
     const { products, getProducts } = useProducts();
@@ -28,7 +29,7 @@ const ProductList = ({ currentData }) => {
         >
             {products ? (
                 currentData().map((item) => (
-                    <ProductCard  key={item.id} item={item} />
+                    <ProductCard key={item.id} item={item} />
                 ))
             ) : (
                 <></>

@@ -9,15 +9,15 @@ import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Badge, Button, Grid, Menu, MenuItem } from "@mui/material";
+// import Badge from "@mui/material/Badge";
 import { AccountCircle } from "@mui/icons-material";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useAuth } from "../context/AuthContextProvaider";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { ADMIN } from "../../helpers/const";
 import { useCart } from "../context/CartContextProvaider";
 import { getCountProductsInCart } from "../../helpers/functions";
-
-const pages = ["Главная", "Все игры", "Новости"];
+import NavabarContexts, { navbarContext } from "../context/NavbarContext";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -62,6 +62,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+    const { searchState, setSearchState } = React.useContext(navbarContext);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [search, setSearch] = React.useState(searchParams.get("q" || ""));
+
+    React.useEffect(() => {
+        setSearchParams({
+            q: search,
+        });
+    }, [search]);
+
+    const openSearch = () => {
+        setSearchState(!searchState);
+    };
+
     const { addProductToCart } = useCart();
     const [count, setCount] = React.useState(0);
     React.useEffect(() => {
@@ -142,8 +157,11 @@ export default function Navbar() {
                                 </Typography>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">
-                                    О нас
+                                <Typography
+                                    textAlign="center"
+                                    onClick={() => navigate("/vopros")}
+                                >
+                                    Часто задаваемые вопросы
                                 </Typography>
                             </MenuItem>
                             <Box
@@ -168,20 +186,25 @@ export default function Navbar() {
                         <Box display={"flex"} alignItems={"center"}>
                             <Search>
                                 <SearchIconWrapper>
-                                    <SearchIcon />
+                                    <SearchIcon onClick={openSearch} />
                                 </SearchIconWrapper>
                                 <StyledInputBase
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
                                     placeholder="Search…"
                                     inputProps={{ "aria-label": "search" }}
+                                    // sx={{ cursor: " pointer" }}
+                                    // position="start"
+                                    onClick={() => setSearchState(false)}
                                 />
                             </Search>
                             <IconButton>
-                                {/* <Badge badgeContent={count} color="warningg"> */}
-                                <ShoppingCartCheckoutIcon
-                                    sx={{ color: "white" }}
-                                    onClick={() => navigate("/cart")}
-                                />
-                                {/* </Badge> */}
+                                <Badge badgeContent={count} color="primary">
+                                    <ShoppingCartCheckoutIcon
+                                        sx={{ color: "white" }}
+                                        onClick={() => navigate("/cart")}
+                                    />
+                                </Badge>
                             </IconButton>
                             <IconButton
                                 size="large"

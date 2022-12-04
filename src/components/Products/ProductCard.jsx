@@ -5,6 +5,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { useProducts } from "../context/ProductContextProvaider";
 import { useCart } from "../context/CartContextProvaider";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import ProductSortPagination from "../../pages/ProductPage/ProductSortPogination";
 
 const ProductCard = ({ item }) => {
     const navigate = useNavigate();
@@ -19,20 +20,22 @@ const ProductCard = ({ item }) => {
             sx={{
                 display: "flex",
                 flexDirection: "column",
-                pt: "100px",
 
                 width: {
                     xs: "45%",
                     sm: "45%",
                     md: "31%",
                     lg: "31%",
-                    xl: "15%",
+                    xl: "17%",
                 },
             }}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
+            
             <Box
+            
+
                 sx={{
                     backgroundImage: `url(${item.picture})`,
                     backgroundRepeat: "no-repeat",
@@ -61,7 +64,6 @@ const ProductCard = ({ item }) => {
                         </Box>
                     ) : (
                         <Box onClick={() => addProductToCart(item)}>
-                            
                             <AddCircleOutlineIcon
                                 sx={{ pb: "265px", pl: "160px" }}
                             />

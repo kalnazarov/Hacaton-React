@@ -1,20 +1,20 @@
 import React from "react";
-import ProductDetails from "./ProductDetails";
+import Vopros from "./Vopros";
 
-const ProductDetailsPage = () => {
+const VoprosPage = () => {
     return (
         <div
             style={{
-                backgroundColor: "rgb(18, 18, 18)",
+                backgroundColor: "white",
                 display: "flex",
                 justifyContent: "center",
                 width: "100%",
                 height: "100%",
             }}
         >
-            <ProductDetails />
+            <Vopros/>
         </div>
     );
 };
 
-export default ProductDetailsPage;
+export default VoprosPage;
