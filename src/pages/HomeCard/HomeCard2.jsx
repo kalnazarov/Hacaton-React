@@ -47,14 +47,20 @@ export default function HomeCard2() {
 
                     width: "100%",
                     height: "100%",
-                    display: "flex",
+                    display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "flex",
+                    },
                     justifyContent: "space-between",
                     borderRadius: "20px 20px",
                 }}
             >
                 {image.map((step, index) => (
                     <div key={index}>
-                        <Box >
+                        <Box>
                             <img
                                 style={{
                                     width: "475px",

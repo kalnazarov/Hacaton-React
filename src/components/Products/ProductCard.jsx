@@ -24,10 +24,10 @@ const ProductCard = ({ item }) => {
                 // alignItems:'center',
 
                 width: {
-                    xs: "45%",
+                    xs: "60%",
                     sm: "45%",
-                    md: "31%",
-                    lg: "31%",
+                    md: "30%",
+                    lg: "22%",
                     xl: "17%",
                 },
             }}

@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Carousel from "../../pages/Carousel/Carousel";
 import HomeFilter from "../../pages/filter/HomeFilter";
 import HomeCard from "../../pages/HomeCard/HomeCard";
@@ -11,6 +12,7 @@ import ProductCard from "../Products/ProductCard";
 
 const HomePage = () => {
     const { products, getProducts } = useProducts();
+    const navigate = useNavigate()
 
     useEffect(() => {
         getProducts();

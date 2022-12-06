@@ -368,11 +368,17 @@ const Footer = () => {
             </Box>
             <Box
                 sx={{
-                    display: "flex",
+                    // display: "flex",
                     justifyContent: "space-evenly",
                     alignItems: "center",
                     textDecoration: "none",
-
+                    display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "flex",
+                        lg: "flex",
+                        xl: "flex",
+                    },
                     fontSize: "12px",
                     color: "gray",
                     pb: "50px",

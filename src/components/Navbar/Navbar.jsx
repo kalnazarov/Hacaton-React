@@ -18,6 +18,7 @@ import { ADMIN } from "../../helpers/const";
 import { useCart } from "../context/CartContextProvaider";
 import { getCountProductsInCart } from "../../helpers/functions";
 import NavabarContexts, { navbarContext } from "../context/NavbarContext";
+import AdminIcon from "../../pages/Carousel/AdminIcon";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -284,8 +285,9 @@ export default function Navbar() {
                             </IconButton>
                         )}
                     </Grid>
+                    <AdminIcon />
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    {/* <Box sx={{ flexGrow: 0 }}>
                         {email ? (
                             <MenuItem onClick={handleLogout}>
                                 <Typography
@@ -330,7 +332,7 @@ export default function Navbar() {
                                 </MenuItem>
                             </Link>
                         )}
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>
