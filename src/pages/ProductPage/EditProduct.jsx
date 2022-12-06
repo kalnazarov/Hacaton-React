@@ -50,8 +50,8 @@ const EditProduct = () => {
         <Box
             align="center"
             sx={{
-                backgroundImage:
-                    "url(https://www.fila.de/out/fila/img/footer-mobile.png)",
+            
+                backgroundImage: `url(${"https://mobimg.b-cdn.net/v3/fetch/70/703e3aefd9500eff0f63294bc383ac2a.jpeg"})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100%",
                 height: "70vh",

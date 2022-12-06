@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ACTIONS, JSON_API_PRODUCTS } from "../../helpers/const";
+import { ACTIONS, JSON_API_COM, JSON_API_PRODUCTS } from "../../helpers/const";
 
 export const productContext = createContext();
 // const location = useLocation();
@@ -11,12 +11,16 @@ export const useProducts = () => {
 
 const INIT_STATE = {
     products: [],
+    com: [],
     productDetails: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
     switch (action.type) {
         case ACTIONS.GET_PRODUCTS:
+            return { ...state, products: action.payload };
+
+        case ACTIONS.GET_COM:
             return { ...state, products: action.payload };
 
         case ACTIONS.GET_PRODUCT_DETAILS:
@@ -34,6 +38,10 @@ const ProductContextProvider = ({ children }) => {
         await axios.post(JSON_API_PRODUCTS, newProduct);
         getProducts();
     }
+    async function addCom(newProduct) {
+        await axios.post(JSON_API_COM, newProduct);
+        getProductCom();
+    }
 
     async function getProducts() {
         const { data } = await axios(
@@ -49,6 +57,13 @@ const ProductContextProvider = ({ children }) => {
         const { data } = await axios(`${JSON_API_PRODUCTS}/${id}`);
         dispatch({
             type: ACTIONS.GET_PRODUCT_DETAILS,
+            payload: data,
+        });
+    }
+    async function getProductCom(id) {
+        const { data } = await axios(`${JSON_API_COM}/${id}`);
+        dispatch({
+            type: ACTIONS.GET_COM,
             payload: data,
         });
     }
@@ -88,6 +103,9 @@ const ProductContextProvider = ({ children }) => {
         productDetails: state.productDetails,
         saveEditedProduct,
         deleteProduct,
+        com: state.com,
+        getProductCom,
+        addCom,
     };
     return (
         <productContext.Provider value={values}>

@@ -7,9 +7,9 @@ import ProductSortPagination from "./ProductSortPogination";
 const ProductList = ({ currentData }) => {
     const { products, getProducts } = useProducts();
 
-    useEffect(() => {
-        getProducts();
-    }, []);
+    // useEffect(() => {
+    //     getProducts();
+    // }, []);
 
     return (
         <Box

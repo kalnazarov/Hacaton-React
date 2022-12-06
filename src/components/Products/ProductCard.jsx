@@ -6,6 +6,7 @@ import { useProducts } from "../context/ProductContextProvaider";
 import { useCart } from "../context/CartContextProvaider";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import ProductSortPagination from "../../pages/ProductPage/ProductSortPogination";
+import HomeCard from "../../pages/HomeCard/HomeCard";
 
 const ProductCard = ({ item }) => {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ const ProductCard = ({ item }) => {
             sx={{
                 display: "flex",
                 flexDirection: "column",
+                // alignItems:'center',
 
                 width: {
                     xs: "45%",
@@ -32,10 +34,7 @@ const ProductCard = ({ item }) => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
-            
             <Box
-            
-
                 sx={{
                     backgroundImage: `url(${item.picture})`,
                     backgroundRepeat: "no-repeat",
@@ -46,6 +45,8 @@ const ProductCard = ({ item }) => {
                     alignItems: "center",
                     justifyContent: "end",
                     backgroundColor: hover ? "green" : "red",
+                    borderRadius: "20px",
+                    backgroundSize:'100% 100%',
                 }}
             >
                 <Box
@@ -59,13 +60,13 @@ const ProductCard = ({ item }) => {
                     {checkProductInCart(item.id) ? (
                         <Box onClick={() => addProductToCart(item)}>
                             <RemoveCircleOutlineIcon
-                                sx={{ pb: "265px", pl: "160px" }}
+                                sx={{ pb: "260px", pl: "160px" }}
                             />
                         </Box>
                     ) : (
                         <Box onClick={() => addProductToCart(item)}>
                             <AddCircleOutlineIcon
-                                sx={{ pb: "265px", pl: "160px" }}
+                                sx={{ pb: "260px", pl: "160px" }}
                             />
                         </Box>
                     )}
@@ -73,7 +74,7 @@ const ProductCard = ({ item }) => {
 
                 <Button
                     sx={{
-                        backgroundColor: "gray",
+                        backgroundColor: "green",
                         width: "50%",
                         color: "white",
                         marginTop: "130%",
@@ -87,7 +88,7 @@ const ProductCard = ({ item }) => {
                             xl: "10px",
                         },
                     }}
-                    onClick={() => navigate(`/products/${item.id}`)}
+                    onClick={() => navigate(`/product/${item.id}`)}
                 >
                     Buy
                 </Button>
