@@ -26,6 +26,7 @@ export default function NativeSelectDemo() {
                     variant="standard"
                     htmlFor="uncontrolled-native"
                     sx={{ color: "white" }}
+                    color="success"
                 >
                     Sort By Price
                 </InputLabel>
@@ -33,20 +34,22 @@ export default function NativeSelectDemo() {
                     sx={{ color: "white" }}
                     onChange={(e) => fetchByParams("_sort", e.target.value)}
                     defaultValue={"1"}
+                    color="success"
                     inputProps={{
                         name: "sort",
                     }}
                 >
-                    <option value={"All"}>All</option>
+                    <option  value={"All"}>All</option>
                     <option value={"ASC"}>Low to High</option>
                     <option value={"DESC"}>High to Low</option>
                 </NativeSelect>
             </FormControl>
 
-            <FormControl fullWidth>
+            <FormControl  fullWidth>
                 <InputLabel
                     variant="standard"
                     htmlFor="uncontrolled-native"
+                    color="success"
                     sx={{ color: "white" }}
                 >
                     Sort By Type
@@ -55,6 +58,7 @@ export default function NativeSelectDemo() {
                     sx={{ color: "white" }}
                     onChange={(e) => fetchByParams("type", e.target.value)}
                     defaultValue={"1"}
+                    color="success"
                     inputProps={{
                         name: "sort",
                     }}
@@ -62,11 +66,9 @@ export default function NativeSelectDemo() {
                     <option value={"All"}>All</option>
                     <option value={"Action"}>Action</option>
                     <option value={"Horror"}>Horror</option>
-                    <option value={"Hoodie"}>Hoodie</option>
-                    <option value={"Sweatshirt"}>Sweatshirt</option>
-                    <option value={"Short"}>Short</option>
-                    <option value={"Jogger"}>Jogger</option>
-                    <option value={"Bomber"}>Bomber</option>
+                    <option value={"Shuter"}>Shuter</option>
+                    <option value={"Race"}>Race</option>
+                    <option value={"Adventure"}>Adventure</option>
                 </NativeSelect>
             </FormControl>
         </Box>

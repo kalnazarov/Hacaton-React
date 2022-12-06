@@ -11,34 +11,30 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import "./style.css";
 import HomeCard from "../HomeCard/HomeCard";
+import { textAlign } from "@mui/system";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
     {
-        label: "San Francisco – Oakland Bay Bridge, United States",
+        label: "Marvel",
         imgPath:
-            "https://cdn2.unrealengine.com/egs-midnight-suns-carousel-desktop-1248x702-eea0532e8ea2.jpg?h=1080&resize=1&w=1920",
+            "https://d2ofqe7l47306o.cloudfront.net/games/1920x1080/marvel-future-revolution-02.jpg",
+        descr: "Откройте для себя мрачную изнанку вселенной Marvel в новой тактической ролевой игре, где под вашим началом будет сражаться Железный Человек, Росомаха, Капитан Америка, Призрачный Гонщик, Блэйд и другие герои",
+        price: "3.52",
     },
+
     {
-        label: "Bird",
+        label: "Рыцари Готэма",
         imgPath:
             "https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontreal-s1-1920x1080-1920x1080-6b66ac601978.jpg?h=720&resize=1&w=1280",
+        descr: "Получите Визионерский набор, чтобы расширить свои возможности. Он включает в себя эксклюзивную трансмогрификацию «Рыцарский дозор от Джима Ли», стиль для костюма «Из будущего», ресурсы, улучшенное снаряжение",
     },
+
     {
-        label: "Bali, Indonesia",
-        imgPath:
-            "https://cdn2.unrealengine.com/inspiration-marvels-spider-man-miles-morales-3840x2160-ba596ec24d23.jpg?h=480&resize=1&w=854",
-    },
-    {
-        label: "sdfsdfsdf",
-        imgPath:
-            "https://www.egames.news/__export/1604687536822/sites/debate/img/2020/11/06/all_out_y_el_xlbum_del_grupo_kda_de_league_of_legends.jpg_242310155.jpg",
-    },
-    {
-        label: "sdfsdf",
-        imgPath:
-            "https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-01-1920x1080-dd83896256e8.jpg",
+        label: "Fortnite",
+        imgPath: "https://wallpaperaccess.com/full/38280.jpg",
+        descr: "Собирайте друзей и отправляйтесь в игру Fortnite от Epic Games, в которой вас ждёт грандиозная битва для 100 игроков. В ней вам предстоит искать полезную добычу, добывать материалы, создавать предметы и отстреливаться от врагов",
     },
 ];
 
@@ -62,18 +58,15 @@ function Carousel() {
     return (
         <Box
             sx={{
-                // display: "flex",
-                // justifyContent: "space-evenly",
-                pt: "100px",
+                pt: "120px",
+                pb: "50px",
 
-                height: "1100px",
-
-                // pb: "50px",
+                height: "100%",
             }}
         >
             <Box
                 sx={{
-                    maxWidth: 995,
+                    maxWidth: 1000,
                     flexGrow: 1,
                 }}
             >
@@ -87,19 +80,61 @@ function Carousel() {
                         <div key={step.label}>
                             {Math.abs(activeStep - index) <= 2 ? (
                                 <Box
-                                    component="img"
                                     sx={{
-                                        border: "2px solid white",
-                                        height: 255,
-                                        display: "block",
-                                        maxWidth: 990,
+                                        display: "flex",
+
+                                        alignItems: "end",
+                                        maxWidth: 1000,
                                         overflow: "hidden",
-                                        width: "100%",
+                                        justifyContent: "center",
+
                                         height: "500px",
+                                        backgroundImage: `url(${step.imgPath})`,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundSize: "100% 100%",
                                     }}
-                                    src={step.imgPath}
-                                    alt={step.label}
-                                />
+                                >
+                                    <Box
+                                        sx={{
+                                            width: "80%",
+                                        }}
+                                    >
+                                        <Box
+                                            sx={{ pb: "20px", width: "1200px" }}
+                                        >
+                                            <Button
+                                                sx={{
+                                                    color: "black",
+                                                    background: "white",
+                                                }}
+                                            >
+                                                Купить сейчас
+                                            </Button>
+                                        </Box>
+                                        <Box
+                                            sx={{
+                                                pb: "10px",
+                                            }}
+                                        >
+                                            {/* <Typography
+                                                sx={{
+                                                    color: "black",
+                                                    fontFamily:
+                                                        "Inter,sans-serif",
+
+                                                    fontSize: "19px",
+
+                                                    textAlign: "center",
+                                                    backgroundColor:
+                                                        "rgb(255,255,255,0.5)",
+                                                    borderRadius: "20px",
+                                                }}
+                                            >
+                                                {step.descr}
+                                            </Typography> */}
+                                        </Box>
+                                    </Box>
+                                </Box>
                             ) : null}
                         </div>
                     ))}
@@ -156,9 +191,6 @@ function Carousel() {
                         </Button>
                     }
                 />
-                <Box sx={{ display: "flex", justifyContent: "center" ,height:'490px'}}>
-                    <HomeCard />
-                </Box>
             </Box>
         </Box>
     );

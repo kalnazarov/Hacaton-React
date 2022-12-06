@@ -49,8 +49,8 @@ const AddProduct = () => {
         <Box
             align="center"
             sx={{
-                backgroundColor: "black",
-                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${"https://mobimg.b-cdn.net/v3/fetch/70/703e3aefd9500eff0f63294bc383ac2a.jpeg"})`,
+
                 backgroundSize: "100%",
                 height: "70vh",
                 display: "flex",
@@ -64,6 +64,7 @@ const AddProduct = () => {
                 [theme.breakpoints.down("md")]: {
                     height: "54vh",
                 },
+                pt:'50px'
             }}
         >
             <Typography

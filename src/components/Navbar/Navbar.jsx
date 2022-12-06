@@ -65,7 +65,7 @@ export default function Navbar() {
     const { searchState, setSearchState } = React.useContext(navbarContext);
 
     const [searchParams, setSearchParams] = useSearchParams();
-    const [search, setSearch] = React.useState(searchParams.get("q" || ""));
+    const [search, setSearch] = React.useState(searchParams.get("q") || "");
 
     React.useEffect(() => {
         setSearchParams({

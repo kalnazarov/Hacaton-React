@@ -8,7 +8,7 @@ import { borderRadius } from "@mui/system";
 
 let image = [
     {
-        img: "https://cdn2.unrealengine.com/egs-runbleverse-season-2-breaker-1920x1080-f337f8c4ba5a.jpg?h=720&resize=1&w=1280",
+        img: "https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontreal-s1-1920x1080-1920x1080-6b66ac601978.jpg?h=720&resize=1&w=1280",
         name: "Rumbleverse - Новый сезон",
         decription:
             "Второй сезон Rumbleverse уже вышел! Сражайтесь с друзьями на новом острове, в новых временных режимах и c совершенно новым боевым пропуском!",
@@ -16,10 +16,8 @@ let image = [
         id: "2",
     },
     {
-        img: "https://cdn2.unrealengine.com/egs-goatsimulator3--standardedition-offerlandscape-2560x1440-12c30a6f90cd.jpg?h=720&resize=1&w=1280",
-
+        img: "https://cdn2.unrealengine.com/en-tga-native-fb-tw-image-1920x1080-2719a42f07aa.jpg?h=720&resize=1&w=1280",
         name: "Рыцари Готэма - Уже доступно",
-
         decription:
             "Бэтмен мёртв. Растущий с невероятной скоростью преступный мир захлестнул улицы Готэм-Сити. Теперь дело за семьёй Бэтмена.",
         price: 26.99,
@@ -27,7 +25,7 @@ let image = [
     },
 
     {
-        img: "https://cdn2.unrealengine.com/egs-fall-guys-spongebob-breaker-1920x1080-a5cc1a775560.jpg?h=720&resize=1&w=1280",
+        img: "https://cdn2.unrealengine.com/egs-somerville-breaker-1920x1080-77da684bc3f3.jpg?h=720&resize=1&w=1280",
         name: "Rumbleverse - Новый сезон",
         decription:
             "Второй сезон Rumbleverse уже вышел! Сражайтесь с друзьями на новом острове, в новых временных режимах и c совершенно новым боевым пропуском!",
@@ -36,13 +34,15 @@ let image = [
     },
 ];
 
-export default function HomeCard() {
+export default function HomeCard2() {
     const [value, setValue] = React.useState(4);
 
     return (
         <Box sx={{ width: "90%", height: "100%" }}>
             <Card
                 sx={{
+                    // display: "flex",
+                    // justifyContent: "space-between",
                     backgroundColor: "rgb(18, 18, 18)",
 
                     width: "100%",
@@ -54,7 +54,7 @@ export default function HomeCard() {
             >
                 {image.map((step, index) => (
                     <div key={index}>
-                        <Box>
+                        <Box >
                             <img
                                 style={{
                                     width: "475px",
