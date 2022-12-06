@@ -45,9 +45,14 @@ export default function HomeCard() {
                 sx={{
                     backgroundColor: "rgb(18, 18, 18)",
 
-                    width: "100%",
                     height: "100%",
-                    display: "flex",
+                    display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "flex",
+                    },
                     justifyContent: "space-between",
                     borderRadius: "20px 20px",
                 }}
@@ -58,6 +63,7 @@ export default function HomeCard() {
                             <img
                                 style={{
                                     width: "475px",
+
                                     heidth: "350px",
                                     display: "flex",
                                 }}

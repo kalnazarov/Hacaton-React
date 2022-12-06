@@ -12,6 +12,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 import "./style.css";
 import HomeCard from "../HomeCard/HomeCard";
 import { textAlign } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -39,6 +40,7 @@ const images = [
 ];
 
 function Carousel() {
+    const navigate = useNavigate();
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = images.length;
@@ -61,12 +63,20 @@ function Carousel() {
                 pt: "120px",
                 pb: "50px",
 
-                height: "100%",
+                // height: "100%",
             }}
         >
             <Box
                 sx={{
-                    maxWidth: 1000,
+                    // maxWidth: 1000,
+                    width: {
+                        xs: "300px",
+                        sm: "500px",
+                        md: "600px",
+                        lg: "800px",
+                        xl: "1000px",
+                    },
+
                     flexGrow: 1,
                 }}
             >
@@ -88,10 +98,17 @@ function Carousel() {
                                         overflow: "hidden",
                                         justifyContent: "center",
 
-                                        height: "500px",
+                                        // height: "500px",
                                         backgroundImage: `url(${step.imgPath})`,
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: "100% 100%",
+                                        height: {
+                                            xs: "150px",
+                                            sm: "200px",
+                                            md: "300px",
+                                            lg: "400px",
+                                            xl: "500px",
+                                        },
                                     }}
                                 >
                                     <Box
@@ -106,7 +123,17 @@ function Carousel() {
                                                 sx={{
                                                     color: "black",
                                                     background: "white",
+                                                    display: {
+                                                        xs: "none",
+                                                        sm: "none",
+                                                        md: "none",
+                                                        lg: "block",
+                                                        xl: "block",
+                                                    },
                                                 }}
+                                                onClick={() =>
+                                                    navigate("/products")
+                                                }
                                             >
                                                 Купить сейчас
                                             </Button>
@@ -115,24 +142,7 @@ function Carousel() {
                                             sx={{
                                                 pb: "10px",
                                             }}
-                                        >
-                                            {/* <Typography
-                                                sx={{
-                                                    color: "black",
-                                                    fontFamily:
-                                                        "Inter,sans-serif",
-
-                                                    fontSize: "19px",
-
-                                                    textAlign: "center",
-                                                    backgroundColor:
-                                                        "rgb(255,255,255,0.5)",
-                                                    borderRadius: "20px",
-                                                }}
-                                            >
-                                                {step.descr}
-                                            </Typography> */}
-                                        </Box>
+                                        ></Box>
                                     </Box>
                                 </Box>
                             ) : null}
